@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Orizon: Progetto Grafica">
+  <div class="flex flex-col gap-4 p-2 w-full">
+    <h3 class="text-primary text-2xl">Vegan Food Discovery</h3>
+    <canvas id="zucchini-canvas" style="position: absolute"></canvas>
+    <p>Questo progetto è nato per iVegan, un brand di cibi a base vegetale.</p>
+    <p>
+      In prima linea sono stati analizzati i punti di forza e debolezza
+      dell’e-commerce (analisi AS IS), basandomi sulle 10 euristiche di Nielsen,
+      responsiveness e le 5 componenti di usabilità. Dopo aver analizzato i post
+      e i commenti degli utenti di Facebook e Instagram ho realizzato un
+      questionario per un target di persone compreso in un range abbastanza
+      vasto, così che potessi comprendere le loro abitudini di acquisto e
+      soprattutto, qualora questi non fossero vegani, quanto significherebbe per
+      loro anche solo provare a capire la scelta etica che c’è dietro.
+    </p>
+    <p>
+      La comunità di iVegan, infatti, è composta allo stesso modo da donne e
+      uomini, interessat* entrambi ai prodotti vegani anche se per la gran parte
+      onnivori: il brand però ha l’obiettivo di estendere la cerchia a qualsiasi
+      genere e scardinare le idee “tradizionali” tramandate negli anni.
+      Attraverso un'indagine sui canali Meta (Facebook e Instagram) e attraverso
+      le recensioni pubblicate sul sito web di iVegan, si può affermare che il
+      target di riferimento è prevalentemente femminile, di età compresa per lo
+      più tra i 20 e i 35 anni, pochi gli over 30. Inoltre, si tratta spesso di
+      persone impegnate socialmente, allineate con i movimenti per un’etica
+      ambientale sostenibile. Sono utenti attenti al proprio benessere
+      psico-fisico e fanno scelte di consumo basate sulla sostenibilità.
+    </p>
+    <p>
+      In seconda fase è stata fatta un’analisi euristica del sito (sia versione
+      web che mobile) per comprenderne le criticità e i punti di forza dal punto
+      di vista della user experience. Successivamente è stata costruita la site
+      map del sito in modo da in modo da capire la struttura, il contenuto e il
+      rapporto tra le singole pagine. Ho cercato ed analizzato i competitor di
+      iVegan: ho comparato le diverse aziende, cercando di ricavare cosa fosse
+      meglio portare all’interno del sito web di iVegan, che avrebbe migliorato
+      la user experience.
+    </p>
+    <p>
+      Creando un questionario, infine, ho cercato di unire le necessità del sito
+      di iVegan con i risultati ricavati dai competitor.
+    </p>
+    <p>
+      Il progetto è disponibile al seguente <a
+        class="text-primary"
+        href="https://www.behance.net/mariaegammald">link</a
+      >.
+    </p>
+  </div>
+</BaseLayout>
+
+<script>
+  import JSConfetti from "js-confetti";
+
+  setTimeout(() => {
+    const canvas = document.getElementById("your_custom_canvas_id")!;
+
+    const jsConfetti = new JSConfetti({ canvas: canvas as HTMLCanvasElement });
+    jsConfetti.addConfetti({
+      confettiRadius: 8,
+      emojis: ["🥒", "🥕", "🌽"],
+      confettiNumber: 30,
+    });
+  }, 1000);
+</script>

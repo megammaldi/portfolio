@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+const { title } = Astro.props;
+import "@fontsource/merriweather";
+import "@fontsource-variable/lora";
+---
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <BaseHead title={title} />
+  </head>
+  <body>
+    <nav
+      class="p-6 flex flex-col lg:flex-row items-center justify-between gap-4 sticky"
+    >
+      <a href="/" class="text-5xl font-lora text-primary">Mari's portfolio</a>
+      <ol class="flex flex-row gap-6">
+        <li><a class="hover:text-primary" href="/#about-me">About me</a></li>
+        <li><a class="hover:text-primary" href="/#projects">Progetti</a></li>
+        <li><a class="hover:text-primary" href="/#contacts">Contatti</a></li>
+      </ol>
+    </nav>
+    <main class="flex flex-col items-center gap-4 mt-8 px-4 pb-8 min-h-dvh">
+      <slot />
+    </main>
+    <footer
+      class="bg-secondary text-[#FAF9F6] flex flex-col items-center gap-4 lg:flex-row w-full p-8 justify-between"
+    >
+      <p>© 2024 Maria Elisa Gammaldi</p>
+      <div class="flex flex-row gap-4">
+        <a
+          class="hover:text-primary"
+          href="https://www.linkedin.com/in/maria-elisa-gammaldi-955844199/"
+          >LinkedIn</a
+        >
+        <a
+          class="hover:text-primary"
+          href="https://www.behance.net/mariaegammald">Behance</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+---
+
+<BaseLayout title="Orizon: Progetto Grafica">
+  <div class="flex flex-col gap-4 p-2 w-full">
+    <h3 class="text-primary text-2xl">Orizon: Progetto Grafica</h3>
+    <h6>
+      <b>Orizon</b>: <i
+        >leave nothing but footprints, take nothing but memories.</i
+      >
+    </h6>
+    <p>
+      Molte persone non hanno la consapevolezza di come un loro viaggio possa
+      incidere sulla comunità. Questo è un grosso problema, perché molti luoghi
+      sono quasi totalmente dipendenti dal turismo. Da qui nasce l'idea di
+      Orizon, per ampliare gli orizzonti di tutti, geografici e non!
+    </p>
+    <p>
+      Con questo progetto, grazie a <a
+        href="https://www.start2impact.it/"
+        class="text-primary">start2impact</a
+      >, ho descritto un concept grafico di un’azienda fittizia che aiuta le
+      persone a rendere i propri viaggi consapevoli, sostenibili e rigenerativi.
+    </p>
+    <div class="grid grid-rows-2 lg:grid-rows-1 lg:grid-cols-2">
+      <div class="flex flex-col gap-4">
+        <p>All’interno della presentazione sono presenti:</p>
+        <ul class="list-disc list-inside">
+          <li>Logo</li>
+          <li>Color Palette (codici HEX, CMYK e RGB)</li>
+          <li>Font selezionati</li>
+          <li>Icone Custom</li>
+        </ul>
+        <p>Facebook:</p>
+        <ul class="list-disc list-inside">
+          <li>1 immagine profilo Web</li>
+          <li>1 immagine copertina Web</li>
+          <li>1 post con presentazione dell'azienda</li>
+          <li>1 post con invito a un evento dell'azienda</li>
+          <li>1 post con presentazione di un servizio/prodotto dell'azienda</li>
+        </ul>
+        <p>Youtube:</p>
+        <ul class="list-disc list-inside">
+          <li>1 immagine profilo Web</li>
+          <li>1 immagine copertina Web</li>
+          <li>1 immagine anteprima video Web</li>
+        </ul>
+        <p>Instagram:</p>
+        <ul class="list-disc list-inside">
+          <li>1 immagine profilo Web</li>
+          <li>1 immagine copertina Web</li>
+          <li>1 post con presentazione dell'azienda</li>
+          <li>1 post con invito a un evento dell'azienda</li>
+          <li>1 post con presentazione di un servizio/prodotto dell'azienda</li>
+        </ul>
+        <p>
+          Il progetto è disponibile al seguente <a
+            class="text-primary"
+            href="https://www.behance.net/mariaegammald">link</a
+          >.
+        </p>
+      </div>
+      <div class="inline-flex flex-col items-center justify-center gap-6">
+        <Image
+          src="/assets/grafica/prodotto.png"
+          alt="Presentazione prodotto"
+          width="300"
+          height="250"
+        />
+        <Image
+          src="/assets/grafica/azienda.png"
+          alt="Presentazione azienda"
+          width="300"
+          height="250"
+        />
+      </div>
+    </div>
+  </div>
+</BaseLayout>

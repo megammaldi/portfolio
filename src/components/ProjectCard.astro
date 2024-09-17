@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+const { title, description, imageSrc, link } = Astro.props;
+---
+
+<article
+  class="relative flex flex-col p-4 rounded-lg gap-2 border-2 border-gray-100 shadow-md lg:w-[520px]"
+>
+  <Image
+    src={imageSrc}
+    alt={title}
+    class="rounded-md w-full h-[250px] lg:h-[350px] object-cover"
+    width="200"
+    height="200"
+  />
+  <h6 class="text-primary text-lg">{title}</h6>
+  <p class="max-w-lg text-sm mb-8">{description}</p>
+  <div class="absolute bottom-4 right-4 flex flex-row justify-end">
+    <a
+      class="flex flex-row gap-2 items-center hover:text-primary hover:fill-primary"
+      href={`/projects/${link}`}
+      >Scopri di più <svg
+        class="h-4"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 320 512"
+      >
+        <path
+          d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"
+        ></path></svg
+      ></a
+    >
+  </div>
+</article>

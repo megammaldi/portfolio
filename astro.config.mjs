@@ -6,6 +6,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   site: `https://megammaldi.github.io`,
-  base: import.meta.env.DEV ? undefined : "portfolio",
+  base: "portfolio",
   integrations: [tailwind()],
 });

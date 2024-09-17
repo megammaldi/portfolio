@@ -9,18 +9,26 @@ import "@fontsource/lora";
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/portfolio/styles/global.css" />
     <BaseHead title={title} />
   </head>
   <body>
     <nav
       class="p-6 flex flex-col lg:flex-row items-center justify-between gap-4 sticky"
     >
-      <a href="/" class="text-5xl font-lora text-primary">Mari's portfolio</a>
+      <a href="/portfolio" class="text-5xl font-lora text-primary"
+        >Mari's portfolio</a
+      >
       <ol class="flex flex-row gap-6">
-        <li><a class="hover:text-primary" href="/#about-me">About me</a></li>
-        <li><a class="hover:text-primary" href="/#projects">Progetti</a></li>
-        <li><a class="hover:text-primary" href="/#contacts">Contatti</a></li>
+        <li>
+          <a class="hover:text-primary" href="/portfolio/#about-me">About me</a>
+        </li>
+        <li>
+          <a class="hover:text-primary" href="/portfolio/#projects">Progetti</a>
+        </li>
+        <li>
+          <a class="hover:text-primary" href="/portfolio/#contacts">Contatti</a>
+        </li>
       </ol>
     </nav>
     <main class="flex flex-col items-center gap-4 mt-8 px-4 pb-8 min-h-dvh">

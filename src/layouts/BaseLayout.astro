@@ -10,11 +10,12 @@ import "@fontsource/lora";
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/portfolio/styles/global.css" />
+    <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico" />
     <BaseHead title={title} />
   </head>
   <body>
     <nav
-      class="p-6 flex flex-col lg:flex-row items-center justify-between gap-4 sticky"
+      class="bg-background shadow-md top-0 z-[1000] p-6 flex flex-col lg:flex-row items-center justify-between gap-4 sticky"
     >
       <a href="/portfolio" class="text-5xl font-lora text-primary"
         >Mari's portfolio</a
@@ -25,6 +26,9 @@ import "@fontsource/lora";
         </li>
         <li>
           <a class="hover:text-primary" href="/portfolio/#projects">Progetti</a>
+        </li>
+        <li>
+          <a class="hover:text-primary" href="/portfolio/cv">CV</a>
         </li>
         <li>
           <a class="hover:text-primary" href="/portfolio/#contacts">Contatti</a>

@@ -1,0 +1,201 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import Stars from "../components/Stars.astro";
+---
+
+<BaseLayout title="Curriculum">
+  <div class="flex flex-col gap-4 p-2 w-full">
+    <div class="flex flex-row gap-4">
+      <Image
+        src="/portfolio/assets/avatar.jpeg"
+        alt="Maria Elisa Gammmaldi"
+        class="rounded-xl"
+        width="150"
+        height="150"
+      />
+      <div class="flex flex-col gap-2">
+        <h2 class="text-3xl text-primary">Maria Elisa Gammaldi</h2>
+        <p>
+          Nel tempo libero: <span class="font-semibold"
+            >UX/UI STUDENT @START2IMPACT</span
+          >
+        </p>
+        <p>
+          Di notte: <span class="font-semibold"
+            >TRADUTTRICE EN>IT/DE>IT | EDITOR FREELANCE</span
+          >
+        </p>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="flex flex-col gap-4">
+        <h3 class="text-xl text-primary uppercase">Informazioni</h3>
+        <p>
+          Con i seminari seguiti durante il mio perorso di studi magistrale in
+          Editoria ho acquisito competenze riguardo traduzioni letterari
+          attraverso differenti CAT Tools, sui software di impaginazione che mi
+          hanno permesso di sviluppare abilità nella correzione di bozze,
+          comunicati stampa per agenzie letterarie e testate giornalistiche.
+        </p>
+        <h3 class="text-xl text-primary uppercase">Competenze Linguistiche</h3>
+        <div class="flex flex-row gap-4">
+          <p>Inglese</p>
+          <Stars number="5" />
+        </div>
+        <div class="flex flex-row gap-4">
+          <p>Tedesco</p>
+          <Stars number="4" />
+        </div>
+        <h3 class="text-xl text-primary uppercase">Tools</h3>
+        <p>Figma</p>
+        <p>InDesign</p>
+        <p>SDL Trados Studios</p>
+        <h3 class="text-xl text-primary uppercase">Volontariato</h3>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">Presidente ESN Brescia</h4>
+          <h5 class="font-semibold">Novembre 2021 - Settembre 2022</h5>
+          <ol class="list-disc list-inside">
+            <li>Rappresentare legale dell'Associazione</li>
+            <li>Coordinatore delle attività del Consiglio Direttivo</li>
+            <li>
+              Supervisore del lavoro dei volontari e organizzatore, insieme agli
+              altri soci, delle attività culturali e ricreative per gli studenti
+              internazionali ospitati nel territorio bresciano
+            </li>
+            <li>
+              Responsabile dei rapporti dell'Associazione con le istituzioni
+            </li>
+          </ol>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">Segretario ESN Brescia</h4>
+          <h5 class="font-semibold">Settembre 2020 - Novembre 2021</h5>
+          <ol class="list-disc list-inside">
+            <li>
+              Responsabile e supervisore delle cartelle Drive, contenenti
+              informazioni sui soci e sulle attività organizzate
+            </li>
+            <li>
+              Organizzatore di attività culturali e ricreative per gli studenti
+              internazionali ospitati nell'area di Brescia
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="flex flex-col gap-4">
+        <h3 class="text-xl text-primary uppercase">Esperienze Lavorative</h3>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">Receptionist @Hotel Igea</h4>
+          <h5 class="font-semibold">Giugno 2024 - In Corso (Brescia)</h5>
+          <ol class="list-disc list-inside">
+            <li>Front e back office</li>
+            <li>Tutoraggio stagisti</li>
+          </ol>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">
+            Content reviewer in lingua tedesca @AccenturexGoogle
+          </h4>
+          <h5 class="font-semibold">
+            Giugno 2022 - Settembre 2023 (Dublino, IE)
+          </h5>
+          <ol class="list-disc list-inside">
+            <li>
+              Responsabile revisione contenuti digitali per piattaforme
+              internazionali
+            </li>
+            <li>
+              Relatrice di corsi di formazione sulle policy aziendali ai nuovi
+              dipendenti
+            </li>
+            <li>
+              Moderatrice di contenuti su piattaforme video per ogni fascia di
+              età, garantendo sicurezza sulla piattaforma
+            </li>
+          </ol>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">
+            Servizio Civile @Oratorio "Don Bosco"
+          </h4>
+          <h5 class="font-semibold">Luglio 2021 - Aprile 2022 (Brescia)</h5>
+          <ol class="list-disc list-inside">
+            <li>Attività di mediazione culturale</li>
+            <li>Segretariato con mansioni di contabilità</li>
+            <li>
+              Responsabile della creazione di attività mirate all’inclusione
+              sociale
+            </li>
+          </ol>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">
+            Front Office @Ente Provinciale per il Turismo
+          </h4>
+          <h5 class="font-semibold">Maggio 2018 - Giugno 2018 (Salerno)</h5>
+          <ol class="list-disc list-inside">
+            <li>
+              Receptionist info point e addetta alle informazioni turistiche
+            </li>
+            <li>Manutenzione e aggiornamento del sito web dell'ente</li>
+            <li>
+              Mansioni riguardanti front e back office (controllo qualità,
+              gestione reclami, manutenzione database)
+            </li>
+          </ol>
+        </div>
+        <h3 class="text-xl text-primary uppercase">Formazione</h3>
+        <div class="flex flex-col gap-2">
+          <h4 class="text-lg uppercase">UX/UI - start2impact</h4>
+          <h5>In corso</h5>
+          <ol class="list-disc list-inside">
+            <li>Copywriting</li>
+            <li>SEO</li>
+            <li>Grafica per social</li>
+            <li>HTML/CSS</li>
+          </ol>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-lg uppercase">
+              Laurea Magistrale in Lingue per la Traduzione e l'Editoria
+              (110L/110)
+            </h4>
+            <h5>Ottobre 2019 - Febbraio 2022</h5>
+            <ol class="list-disc list-inside">
+              <li>Traduzione di teti da e verso la lingua inglese e tedesca</li>
+              <li>
+                Impaginazione su InDesign di documenti cartacei e per le
+                piattaforme digiitali
+              </li>
+              <li>
+                Utilizzo di software per la traduzione (SDL Trados, Smartcat,
+                Memsource)
+              </li>
+              <li>
+                Partecipazione ad eventi editoriali fieristici (Salone del Libro
+                di Torino, Frankfurter Buchmess)
+              </li>
+            </ol>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-lg uppercase">Agenzia Letteraria Herzog</h4>
+            <h5>Dicembre 2018 - Marzo 2019</h5>
+            <ol class="list-disc list-inside">
+              <li>Editing</li>
+              <li>Correzione di bozze</li>
+              <li>Progettazione copertina di un libro</li>
+              <li>Comunicati stampa</li>
+            </ol>
+          </div>
+          <div class="flex flex-col gap-2">
+            <h4 class="text-lg uppercase">
+              Laurea Triennale in Lingue, Letterature e Culture dell'Europa e
+              delle Americhe
+            </h4>
+            <h5>Ottobre 2014 - Luglio 2019</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

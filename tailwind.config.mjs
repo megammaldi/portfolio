@@ -6,6 +6,7 @@ export default {
       colors: {
         primary: "#f1356d",
         secondary: "#0ecf95",
+        background: "#FAF9F6",
       },
     },
   },

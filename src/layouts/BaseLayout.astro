@@ -11,9 +11,24 @@ import "@fontsource/lora";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/portfolio/styles/global.css" />
     <link rel="icon" type="image/x-icon" href="/portfolio/favicon.ico" />
+    <meta name="title" content="Mari's Portfolio" />
+    <meta name="description" content="Ciao, sono Maria Elisa, Classe 1995, aspirante UX/UI Designer." />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://megammaldi.github.io/portfolio/" />
+    <meta property="og:title" content="Mari's Portfolio" />
+    <meta property="og:description" content="Ciao, sono Maria Elisa, Classe 1995, aspirante UX/UI Designer." />
+    <meta property="og:image" content="https://megammaldi.github.io/portfolio/assets/meta/meta.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://megammaldi.github.io/portfolio/" />
+    <meta property="twitter:title" content="Mari's Portfolio" />
+    <meta property="twitter:description" content="Ciao, sono Maria Elisa, Classe 1995, aspirante UX/UI Designer." />
+    <meta property="twitter:image" content="https://megammaldi.github.io/portfolio/assets/meta/meta.png" />
     <BaseHead title={title} />
   </head>
-  <body>
+  <body class="overscroll-x-none">
     <nav
       class="bg-background shadow-md top-0 z-[1000] p-6 flex flex-col lg:flex-row items-center justify-between gap-4 sticky"
     >
@@ -44,11 +59,13 @@ import "@fontsource/lora";
       <p>© 2024 Maria Elisa Gammaldi</p>
       <div class="flex flex-row gap-4">
         <a
+          target="_blank"
           class="hover:text-primary"
           href="https://www.linkedin.com/in/maria-elisa-gammaldi-955844199/"
           >LinkedIn</a
         >
         <a
+          target="_blank"
           class="hover:text-primary"
           href="https://www.behance.net/mariaegammald">Behance</a
         >

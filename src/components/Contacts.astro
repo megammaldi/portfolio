@@ -2,9 +2,21 @@
 
 ---
 
-<section class="flex flex-col gap-4 items-center min-w-96" id="contacts">
+<section class="flex flex-col gap-4 items-center w-[50%]" id="contacts">
   <h3 class="text-primary text-2xl">Contattami</h3>
-  <form class="flex flex-col gap-4" id="email-send-form">
+  <h4 style="display: none" id="confirmed-submit" class="hidden">Grazie per avermi contattato, ti ricontattero' appena possibile !</h4>
+  <form class="flex flex-col gap-4 w-full" id="email-send-form">
+    <input type="hidden" name="contact_number" value={crypto.randomUUID()} />
+    <div class="flex flex-col gap-y-1.5">
+      <label class="required-input" for="subject">Email</label>
+      <input
+        class="rounded-lg p-2 border-gray-100 shadow placeholder:text-sm"
+        id="email"
+        name="email"
+        required
+        placeholder="La tua Email"
+      />
+    </div>
     <div class="flex flex-col gap-y-1.5">
       <label class="required-input" for="subject">Oggetto</label>
       <input
@@ -22,9 +34,10 @@
         id="message"
         name="message"
         required
-        rows="4"></textarea>
+        rows="8"></textarea>
     </div>
     <button
+      id="contact-submit-btn"
       class="bg-primary hover:bg-opacity-80 text-white py-2 px-4 rounded text-sm"
       type="submit">Invia</button
     >
@@ -32,22 +45,29 @@
 </section>
 
 <script>
-  document
-    .getElementById("email-send-form")!
-    .addEventListener("submit", handleSendEmail);
+  import emailjs from "@emailjs/browser";
+  import { doc } from "prettier";
+
+  emailjs.init({
+    publicKey: "7qJ6Ef1fX6fjNJJGq",
+  });
+
+  const form = document
+    .getElementById("email-send-form")!;
+  const confirmedSubmit = document.getElementById('confirmed-submit')!;
+  const contactSubmitBtn = document.getElementById('contact-submit-btn')!;
+
+  form.addEventListener("submit", handleSendEmail);
 
   function handleSendEmail(e: SubmitEvent) {
     e.preventDefault();
-    const subject = (document.getElementById("subject") as HTMLInputElement)
-      .value;
-    const message = (document.getElementById("message") as HTMLInputElement)
-      .value;
-    if (!subject || !message) {
-      return;
-    }
-    const href = `mailto:megammaldi@gmail.com?subject=${subject}&body=${message}`;
-    const a = document.createElement("a");
-    a.href = href;
-    a.click();
+    contactSubmitBtn.setAttribute('disabled', 'disabled');
+    emailjs.sendForm("service_7fz2y6n","template_leg1pdf", form as HTMLFormElement)
+      .then((response) => console.log(response))
+      .catch((error) => console.error(error))
+      .finally(() => {
+        form.style.display = 'none';
+        confirmedSubmit.style.display = 'block';
+      })
   }
 </script>

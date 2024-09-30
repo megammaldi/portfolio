@@ -56,14 +56,12 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <script>
   import JSConfetti from "js-confetti";
 
-  setTimeout(() => {
-    const canvas = document.getElementById("your_custom_canvas_id")!;
+  const canvas = document.getElementById("your_custom_canvas_id")!;
 
-    const jsConfetti = new JSConfetti({ canvas: canvas as HTMLCanvasElement });
-    jsConfetti.addConfetti({
-      confettiRadius: 8,
-      emojis: ["🥒", "🥕", "🌽"],
-      confettiNumber: 30,
-    });
-  }, 1000);
+  const jsConfetti = new JSConfetti({ canvas: canvas as HTMLCanvasElement });
+  jsConfetti.addConfetti({
+    confettiRadius: 8,
+    emojis: ["🥒", "🥕", "🌽"],
+    confettiNumber: 30,
+  });
 </script>
